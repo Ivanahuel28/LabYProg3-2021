@@ -13,15 +13,24 @@ public class Main {
 
         Scanner entradaEscaner = new Scanner (System.in);
 
-        System.out.printf("\nIngrese velocidad : \n");
+        System.out.printf("\nIngrese valor cateto A : \n");
 
         String entrada = entradaEscaner.nextLine();
 
-        float valor = Float.parseFloat(entrada);
+        float catA = Float.parseFloat(entrada);
 
-        // v*1000/3600
+        System.out.printf("\nIngrese valor cateto B : \n");
 
-        System.out.println(String.format("%.2f",valor) +" Km/h = " + String.format("%.2f",valor*1000/3600) + " m/s " );
+        entrada = entradaEscaner.nextLine();
+
+        float catB = Float.parseFloat(entrada);
+
+        //System.out.println(String.format("%.2f",valor) +" Km/h = " + String.format("%.2f",valor*1000/3600) + " m/s " );
+
+        System.out.println("\nCateto A : " + String.format("%.2f",catA));
+        System.out.println("\nCateto B : " + String.format("%.2f",catB));
+
+        System.out.println("\nHipotenusa : " + String.format("%.2f",(float)Math.sqrt((double)(catA*catA+catB*catB))));
     }
 }
 
