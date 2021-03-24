@@ -17,7 +17,7 @@ public class Main {
 
         n = 5;
         a = 13.4;
-        c = '8';
+        c = 'a';
 
         System.out.println("Los valores son...	 n = " + n + "	a = " + a + "	c = " + c );
         System.out.println("Suma n+a = " + (n+a));
