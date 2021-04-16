@@ -10,12 +10,19 @@ public class Invoice {
     private double totalAmount;
     private LocalDateTime date;
     private Client client;
+    private StoreItem[] storeItems;
 
-    public Invoice(Client client, double totalAmount){
+    public Invoice(){
         this.id = UUID.randomUUID();
-        this.totalAmount = totalAmount;
+        this.date = LocalDateTime.now();
+    }
+
+    public Invoice(Client client, StoreItem[] storeItems){
+        this.id = UUID.randomUUID();
         this.client = client;
         this.date = LocalDateTime.now();
+        this.storeItems = storeItems;
+        this.totalAmount = StoreItem.getTotalAmount(storeItems);
     }
 
     // retorna el total con el descuento del cliente aplicado

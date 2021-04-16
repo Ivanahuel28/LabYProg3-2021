@@ -4,6 +4,9 @@ import com.company.E1.Author;
 import com.company.E1.Book;
 import com.company.E2.Client;
 import com.company.E2.Invoice;
+import com.company.E2.StoreItem;
+import com.company.E3.Account;
+import com.company.E3.Person;
 
 import java.time.LocalDateTime;
 
@@ -48,14 +51,48 @@ public class Main {
 
          */
 
+        /*
         System.out.println("Ejercicio 2 ------------------------------------------------------------");
 
         Client objClient = new Client("Ivan","ivan@gmail.com",15);
 
         System.out.println(objClient.toString());
 
-        Invoice objInvoice = new Invoice( objClient , 2000 );
+        StoreItem [] items = new StoreItem[2];
+
+        StoreItem item = new StoreItem("Shampoo","Marca : Shampucito :)",50);
+
+        StoreItem item2 = new StoreItem("Dentrifico","Marca : Colgate",150);
+
+        items[0] = item;
+
+        items[1] = item2;
+
+        Invoice objInvoice = new Invoice( objClient , items );
 
         System.out.println(objInvoice.toString());
+
+         */
+
+        System.out.println("Ejercicio 3 ------------------------------------------------------------");
+
+        Person client = new Person("Ivan",'M');
+
+        System.out.println(client.toString());
+
+        Account objAccount = new Account(client,10000);
+
+        objAccount.extract(5000);
+
+        objAccount.extract(5000);
+
+        objAccount.extract(1000);
+
+        objAccount.deposit(200);
+
+        objAccount.extract(2000);
+
+
+
     }
 }
