@@ -90,9 +90,23 @@ public class Main {
 
         objAccount.deposit(200);
 
-        objAccount.extract(2000);
+        objAccount.deposit(5000);
 
+        objAccount.deposit(5000);
 
+        objAccount.extract(5000);
+
+        objAccount.extract(1000);
+
+        objAccount.deposit(200);
+
+        objAccount.extract(5000);
+
+        objAccount.extract(1000);
+
+        objAccount.deposit(200);
+
+        objAccount.printAccountLogs();
 
     }
 }
