@@ -56,4 +56,29 @@ public class VideoStoreGestor {
         return list;
     }
 
+    public String lastTenRentOfClient(Client client){
+
+        ArrayList<String> filmsNames = new ArrayList<String>();
+        int pos = this.rents.size()-1;
+
+        while (filmsNames.size()<10 && pos>0){
+            if (this.rents.get(pos).getClient()==client){
+                for (Film film : this.rents.get(pos).getFilms()){
+                    filmsNames.add(film.getTitle());
+                }
+            }
+            pos--;
+        }
+
+        String list = "Listado de ultimas 10 peliculas alquiladas por "+client.getName();
+
+        for(String title : filmsNames){
+            list += "\n"+title;
+        }
+
+        return list;
+    }
+
+
+
 }
