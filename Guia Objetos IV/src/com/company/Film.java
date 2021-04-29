@@ -7,18 +7,16 @@ public class Film {
     // attributes
     private String title;
     private LocalDate releaseDate;
-    private  FilmGenre filmGenre;
+    private  String filmGenre;
     private int duration;
-    private AudienceRating audienceRating;
+    private String audienceRating;
     private String country;
     private String description;
     private int stock;
 
     // constructors
-    public Film() {
-    }
 
-    public Film(String title, LocalDate releaseDate, FilmGenre filmGenre, int duration, AudienceRating audienceRating, String country, String description, int stock) {
+    public Film(String title, LocalDate releaseDate, String filmGenre, int duration, String audienceRating, String country, String description, int stock) {
         this.title = title;
         this.releaseDate = releaseDate;
         this.filmGenre = filmGenre;
@@ -46,11 +44,11 @@ public class Film {
         this.releaseDate = releaseDate;
     }
 
-    public FilmGenre getFilmGenre() {
+    public String getFilmGenre() {
         return filmGenre;
     }
 
-    public void setFilmGenre(FilmGenre filmGenre) {
+    public void setFilmGenre(String filmGenre) {
         this.filmGenre = filmGenre;
     }
 
@@ -62,11 +60,11 @@ public class Film {
         this.duration = duration;
     }
 
-    public AudienceRating getAudienceRating() {
+    public String getAudienceRating() {
         return audienceRating;
     }
 
-    public void setAudienceRating(AudienceRating audienceRating) {
+    public void setAudienceRating(String audienceRating) {
         this.audienceRating = audienceRating;
     }
 
@@ -94,6 +92,13 @@ public class Film {
         this.stock = stock;
     }
 
-
+    @Override
+    public String toString() {
+        return "Titulo : '" + title + '\'' +
+                "\n Lanzamiento :" + releaseDate +", Genero :" + filmGenre +", Duracion :" + duration +
+                "\n Clasificacion :" + audienceRating +", País='" + country + '\'' +
+                "\n Descripcion : " + description + '\'' +
+                "\n Stock :" + stock ;
+    }
 
 }

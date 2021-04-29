@@ -54,4 +54,23 @@ public class Rent {
     public void setRentalEndDate(LocalDate rentalEndDate) {
         this.rentalEndDate = rentalEndDate;
     }
+
+    @Override
+    public String toString() {
+        return this.client.toString()
+                +"\n Peliculas alquiladas :"
+                + this.filmsListed();
+    }
+
+    private String filmsListed(){
+        String list = "";
+
+        for (Film film :this.films) {
+            list += ("\n" + film.getTitle());
+        }
+
+        return list;
+    }
+
+
 }

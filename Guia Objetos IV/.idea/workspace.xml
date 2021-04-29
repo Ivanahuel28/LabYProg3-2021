@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="194fc1ca-679f-4e59-a7a0-7421948592d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/AudienceRating.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Film.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/FilmGenre.java" beforeDir="false" />
+    <list default="true" id="194fc1ca-679f-4e59-a7a0-7421948592d4" name="Default Changelist" comment="Problema de archivos solucionado">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/AudienceRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AudienceRating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FilmGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FilmGenre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Rent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/VideoStoreGestor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Rent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Rent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/VideoStoreGestor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/VideoStoreGestor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +18,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1rionXCWOxxNYg3dK2QM9KNe2pX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -84,6 +88,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
@@ -96,13 +103,39 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="194fc1ca-679f-4e59-a7a0-7421948592d4" name="Default Changelist" comment="" />
       <created>1619468439689</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619468439689</updated>
     </task>
+    <task id="LOCAL-00001" summary="Problema de archivos solucionado">
+      <created>1619468528476</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619468528476</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Problema de archivos solucionado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Problema de archivos solucionado" />
   </component>
 </project>

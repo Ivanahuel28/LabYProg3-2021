@@ -2,12 +2,16 @@ package com.company;
 
 public class Client {
 
+    // ATTRIBUTES
     private String name;
     private String phoneNumber;
     private String homeAddress;
 
+    // CONSTRUCTORS
+    /*
     public Client() {
     }
+    */
 
     public Client(String name, String phoneNumber, String homeAddress) {
         this.name = name;
@@ -15,6 +19,7 @@ public class Client {
         this.homeAddress = homeAddress;
     }
 
+    // GETTERS & SETTERS
     public String getName() {
         return name;
     }
@@ -39,9 +44,10 @@ public class Client {
         this.homeAddress = homeAddress;
     }
 
-    /*
-    -name : String
-    -phoneNumber : String
-    -homeAddress : String
-     */
+    @Override
+    public String toString() {
+        return "\n Datos del Cliente "
+                + "\n Nombre :" + name
+                + "\n Telefono :" + phoneNumber+", Direccion :" + homeAddress ;
+    }
 }

@@ -2,12 +2,12 @@ package com.company;
 
 public class FilmGenre {
 
-    public final String ACCION = "Accion";
-    public final String AVENTURA = "Aventura";
-    public final String COMEDIA = "Comedia";
-    public final String DRAMA = "Drama";
-    public final String HORRROR = "Horror";
-    public final String DOCUMENTAL = "Documental";
+    public static final String ACCION = "Accion";
+    public static final String AVENTURA = "Aventura";
+    public static final String COMEDIA = "Comedia";
+    public static final String DRAMA = "Drama";
+    public static final String HORRROR = "Horror";
+    public static final String DOCUMENTAL = "Documental";
 
     /*
     -Acción
