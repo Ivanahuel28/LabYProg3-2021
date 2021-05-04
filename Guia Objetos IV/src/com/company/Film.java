@@ -1,6 +1,7 @@
 package com.company;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 
 public class Film {
 
@@ -13,6 +14,8 @@ public class Film {
     private String country;
     private String description;
     private int stock;
+    private int popularity;
+    private int rents;
 
     // constructors
 
@@ -25,6 +28,8 @@ public class Film {
         this.country = country;
         this.description = description;
         this.stock = stock;
+        this.popularity = 0;
+        this.rents = 0;
     }
 
     // getters & setters
@@ -92,13 +97,54 @@ public class Film {
         this.stock = stock;
     }
 
+    public int getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(int popularity) {
+        this.popularity = popularity;
+    }
+
+    public int getRents() {
+        return rents;
+    }
+
+    public void setRents(int rents) {
+        this.rents = rents;
+    }
+
     @Override
     public String toString() {
         return "Titulo : '" + title + '\'' +
                 "\n Lanzamiento :" + releaseDate +", Genero :" + filmGenre +", Duracion :" + duration +
                 "\n Clasificacion :" + audienceRating +", País='" + country + '\'' +
                 "\n Descripcion : " + description + '\'' +
-                "\n Stock :" + stock ;
+                "\n Stock :" + stock +
+                "\n Popularidad : "+ this.popularity +
+                "\n Veces Alquilada : "+ this.rents;
     }
 
+    public void increasePopularity(){
+        this.popularity++;
+    }
+
+    public static Comparator<Film> FilmPopularityComparator = new Comparator<Film>() {
+
+        public int compare(Film film1, Film film2) {
+            int film1Popularity = film1.getPopularity();
+            int film2Popularity = film2.getPopularity();
+
+            return film1Popularity-film2Popularity;
+
+            //para orden ascendente
+            //return film1Popularity-film2Popularity;
+        }
+    };
+
+    public static Comparator<Film> FilmRentsComparator = new Comparator<Film>() {
+
+        public int compare(Film film1, Film film2) {
+            return film1.getRents()-film2.getRents();
+        }
+    };
 }

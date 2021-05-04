@@ -2,6 +2,8 @@ package com.company;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class VideoStoreGestor {
 
@@ -16,8 +18,11 @@ public class VideoStoreGestor {
         }
 
         for (Film film :films) {
+            film.increasePopularity(); // aumenta la popularidad
             if (film.getStock() == 0){ // si el stock es 0 se quita de la lista de peliculas a alquilar
                 films.remove(film);
+            } else {
+                film.setStock(film.getStock()-1);
             }
         }
 
@@ -29,20 +34,23 @@ public class VideoStoreGestor {
         this.rents.add(newRent);
     }
 
-    public String listCurrentsRents(){
+    public void addClient(Client client){
+        this.clients.add(client);
+    }
 
-        String text = "Alquileres vigentes" ;
+    public void listCurrentsRents(){
 
-        if (this.rents.size()==0){
-            text += "\nNO HAY ALQUILERES VIGENTES";
+        System.out.println("Alquileres vigentes....");
+
+        for (Rent rent : this.rents) {
+            /*
+            System.out.println(String.format("Cliente : %s \n\tPeliculas : ",rent.getClient().getName()));
+
+            for (Film film : rent.getFilms()) {
+                System.out.println(film.getTitle());
+            }*/
+            System.out.println(rent.toString());
         }
-        else{
-            for (Rent rent :this.rents) {
-                text += "\n" + rent.toString();
-            }
-        }
-
-        return text;
     }
 
     public String expectedReturns(LocalDate day){
@@ -56,7 +64,7 @@ public class VideoStoreGestor {
         return list;
     }
 
-    public String lastTenRentOfClient(Client client){
+    public String lastTenRentsOfClient(Client client){
 
         ArrayList<String> filmsNames = new ArrayList<String>();
         int pos = this.rents.size()-1;
@@ -79,6 +87,33 @@ public class VideoStoreGestor {
         return list;
     }
 
+    public void listMostRentedFilms(){
+        ArrayList<Film>  filmsCopy = this.films;// realizo una copia
 
+        Collections.sort(filmsCopy,Film.FilmRentsComparator);
 
+        System.out.println("\nLista de peliculas segun cantidad de alquileres (Descendente) : ");
+
+        for (Film film : filmsCopy) {
+            System.out.println(String.format("\n %s veces alquilado %d",film.getTitle(),film.getRents()));
+        }
+    }
+
+    public void popularityByGenre(String filmGenre){
+        ArrayList<Film> filmsOfSameGenre = new ArrayList<Film>();
+
+        for (Film film : this.films) {
+            if (film.getFilmGenre()==filmGenre){
+                filmsOfSameGenre.add(film);
+            }
+        }
+
+        Collections.sort(filmsOfSameGenre,Film.FilmPopularityComparator);
+
+        System.out.println("Lista de peliculas de "+filmGenre+" segun popularidad");
+
+        for (Film film : filmsOfSameGenre ) {
+            System.out.println(String.format("\n %s ; Popularidad : %d",film.getTitle(),film.getPopularity()));
+        }
+    }
 }

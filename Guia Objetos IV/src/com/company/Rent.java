@@ -12,8 +12,6 @@ public class Rent {
     private LocalDate rentalEndDate;
 
     // constructors
-    public Rent() {
-    }
 
     public Rent(Client client, ArrayList<Film> films, LocalDate rentalStartDate, LocalDate rentalEndDate) {
         this.client = client;

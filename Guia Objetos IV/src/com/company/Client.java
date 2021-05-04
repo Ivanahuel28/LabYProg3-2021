@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Client {
 
     // ATTRIBUTES
@@ -8,10 +10,6 @@ public class Client {
     private String homeAddress;
 
     // CONSTRUCTORS
-    /*
-    public Client() {
-    }
-    */
 
     public Client(String name, String phoneNumber, String homeAddress) {
         this.name = name;
